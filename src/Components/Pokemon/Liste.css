@@ -1,0 +1,10 @@
+.Fiche{
+    Background-color: darkred;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.Fiche_Infos{
+    text-decoration: none;
+    color:black;
+}

@@ -116,11 +116,13 @@ class Fiche extends React.Component{
         const {isLoading} = this.state;
         return (
             <div>
-                <div>
-                    <h2>{this.state.name}</h2>
-                </div>
-                <div>
-                    {isLoading ? <Loader/> : <img src={this.state.imageUrl} />}
+                <div class="titre">
+                    <div class="nom">
+                        <h2>{this.state.name}</h2>
+                    </div>
+                    <div class="image">
+                        {isLoading ? <Loader/> : <img src={this.state.imageUrl} />}
+                    </div>
                 </div>
                 <div>
                     {this.state.types.map(type => (
@@ -140,20 +142,22 @@ class Fiche extends React.Component{
                         </span> 
                     ))}
                 </div>
-                <div class="statistiques">
-                    <small>HP : {this.state.stats.hp}</small>
-                    <small>Attaque : {this.state.stats.attack}</small>
-                    <small>Défense : {this.state.stats.defense}</small>
-                    <small>Vitesse : {this.state.stats.speed}</small>
-                    <small>Attaque Spéciale : {this.state.stats.specialAttack}</small>
-                    <small>Défense Spéciale : {this.state.stats.specialDefense}</small>
-                </div>
-                <div>
-                    <small>Taille : {this.state.height} cm</small>
-                    <small>Poids : {this.state.weight} kg</small>
-                </div>
-                <div>
-                    <small>Capacités : {this.state.abilities}</small>
+                <div class="informations">
+                    <div class="statistiques">
+                        <small>HP : {this.state.stats.hp}</small>
+                        <small>Attaque : {this.state.stats.attack}</small>
+                        <small>Défense : {this.state.stats.defense}</small>
+                        <small>Vitesse : {this.state.stats.speed}</small>
+                        <small>Attaque Spéciale : {this.state.stats.specialAttack}</small>
+                        <small>Défense Spéciale : {this.state.stats.specialDefense}</small>
+                    </div>
+                    <div class="taille_poids">
+                        <small>Taille : {this.state.height} cm</small>
+                        <small>Poids : {this.state.weight} kg</small>
+                    </div>
+                    <div class="capacités">
+                        <small>Capacités : {this.state.abilities}</small>
+                    </div>
                 </div>
 
             </div>

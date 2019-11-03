@@ -6,7 +6,7 @@ import ListDetail from './ListeDetail';
 class List extends React.Component {
 
     state = {
-        url: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151',
+        url: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=807',
         pokemon: null
     };
 
