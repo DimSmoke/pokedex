@@ -17,12 +17,14 @@ class ListeDetail extends React.Component {
         });
     }
 
+    
+
     render() {
         const {isLoading} = this.state;
         return(
             <div className="Fiche">
                 <Link to={`pokemon/${this.state.name}`}>
-                    {isLoading ? <Loader/> : <h6 className="Fiche_Infos">{this.state.name}</h6>}
+                    <h6 className="Fiche_Infos">{this.state.name}</h6>
                 </Link>
             </div>
         )
