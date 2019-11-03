@@ -1,17 +1,30 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import Loader from '../Loader.js';
 
 class ListeDetail extends React.Component {
     state ={
+        isLoading: false,
         name:'',
-        imageUrl:'',
-        pokemonIndex:''
+        imageUrl:''
+    };
+
+    componentDidMount(){
+        const {name, url} = this.props;
+
+        this.setState({
+            name
+        });
     }
 
     render() {
-        const {name, url} = this.props;
-
+        const {isLoading} = this.state;
         return(
-            <h1>{name}</h1>
+            <div className="Fiche">
+                <Link to={`pokemon/${this.state.name}`}>
+                    {isLoading ? <Loader/> : <h6 className="Fiche_Infos">{this.state.name}</h6>}
+                </Link>
+            </div>
         )
     }
 }
