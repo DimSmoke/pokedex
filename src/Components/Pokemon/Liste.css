@@ -8,3 +8,9 @@
     text-decoration: none;
     color:black;
 }
+
+.type{
+    border-radius: 15px;
+    border-color : white;
+    border-width: 1px;
+}

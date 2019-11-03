@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+import './Liste.css';
 import Loader from '../Loader.js'
 
 const TYPE_COLORS = {
@@ -144,15 +145,15 @@ class Fiche extends React.Component{
                 </div>
                 <div class="informations">
                     <div class="statistiques">
-                        <small>HP : {this.state.stats.hp}</small>
-                        <small>Attaque : {this.state.stats.attack}</small>
-                        <small>Défense : {this.state.stats.defense}</small>
-                        <small>Vitesse : {this.state.stats.speed}</small>
-                        <small>Attaque Spéciale : {this.state.stats.specialAttack}</small>
+                        <small>HP : {this.state.stats.hp} / </small>
+                        <small>Attaque : {this.state.stats.attack} / </small>
+                        <small>Défense : {this.state.stats.defense} / </small>
+                        <small>Vitesse : {this.state.stats.speed} / </small>
+                        <small>Attaque Spéciale : {this.state.stats.specialAttack} / </small>
                         <small>Défense Spéciale : {this.state.stats.specialDefense}</small>
                     </div>
                     <div class="taille_poids">
-                        <small>Taille : {this.state.height} cm</small>
+                        <small>Taille : {this.state.height} cm / </small>
                         <small>Poids : {this.state.weight} kg</small>
                     </div>
                     <div class="capacités">
